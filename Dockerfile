@@ -17,4 +17,4 @@ RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the jar
-CMD ["sh", "-c", "java -jar target/mvn/wrapper/maven-wrapper.jar"]
+CMD ["sh", "-c", "java -jar target/*.jar"]
