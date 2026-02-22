@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/movies_and_anime?sslMode=VERIFY_IDENTITY}
-    username: ${2bBghKBxXPvWeNz.lokesh-molleti}
-    password: ${mlokesh@01}
+    url: ${SPRING_DATA_SOURCE_URL}
+    username: ${SPRING_DATA_SOURCE_USERNAME}
+    password: ${SPRING_DATA_SOURCE_PASSWORD}
 
     hikari:
       maximum-pool-size: 5
