@@ -1,14 +1,20 @@
-# Use official Java image
+# Use Java 17 lightweight image
 FROM eclipse-temurin:17-jdk-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy everything
+# Copy project files
 COPY . .
 
-# Build the application
+# Give execute permission to mvnw
+RUN chmod +x mvnw
+
+# Build the jar
 RUN ./mvnw clean package -DskipTests
 
+# Expose port (Render gives dynamic PORT)
+EXPOSE 8080
+
 # Run the jar
-CMD ["java", "-jar", "target/movie-recommendation-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/mvn/wrapper/maven-wrapper.jar"]
