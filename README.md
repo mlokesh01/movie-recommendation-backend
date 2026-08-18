@@ -1,4 +1,6 @@
-# Movie Recommender Backend
+# Movie Discovery & Recommendation Platform
+
+## Backend
 
 Backend service for the Movie Recommender application, built with Java and Spring Boot.
 
